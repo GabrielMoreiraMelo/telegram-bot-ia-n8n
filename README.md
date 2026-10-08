@@ -67,10 +67,10 @@ Usuário recebe a resposta
 ## Prints
 
 ### Workflow no n8n
-![Workflow no n8n](prints/canvas.png)
+![Workflow no n8n](canvas.png)
 
 ### Conversa com o bot
-![Conversa com o bot](prints/conversa.png)
+![Conversa com o bot](conversa.png)
 
 ## Melhorias futuras
 
@@ -81,3 +81,9 @@ Usuário recebe a resposta
 ## Autor
 
 Gabriel Moreira Melo, estudante de Análise e Desenvolvimento de Sistemas (ULBRA)
+
+## Correção de Erros 
+- **Erro 503 (Service unavailable) no Gemini**
+- **Causa:** o modelo estava sobrecarregado no servidor do Google, o que é comum no plano gratuito. A mensagem chegava, mas o usuário ficava sem resposta.
+- **Solução:** ativei o *Retry On Fail* no nó (3 tentativas, 3 s de intervalo) e troquei para o modelo Flash-Lite, mais leve.
+- **Resultado:** o bot responde mesmo com instabilidade na API, só com alguns segundos de atraso.
