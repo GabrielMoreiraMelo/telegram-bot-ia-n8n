@@ -1,0 +1,12 @@
+# Variáveis de ambiente reais
+.env
+
+# Dados locais do n8n
+.n8n/
+
+# Logs
+*.log
+
+# Sistema
+Thumbs.db
+.DS_Store
